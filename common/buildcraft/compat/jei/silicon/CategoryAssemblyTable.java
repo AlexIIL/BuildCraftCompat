@@ -5,7 +5,7 @@ import java.util.List;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.ResourceLocation;
 
-import buildcraft.api.BCModules;
+import buildcraft.api.EnumBuildCraftModule;
 
 import mezz.jei.api.IGuiHelper;
 import mezz.jei.api.gui.IDrawable;
@@ -37,7 +37,7 @@ public class CategoryAssemblyTable implements IRecipeCategory<WrapperAssemblyTab
 
     @Override
     public String getModName() {
-        return BCModules.SILICON.name();
+        return EnumBuildCraftModule.SILICON.name();
     }
 
     @Override

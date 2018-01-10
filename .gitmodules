@@ -1,3 +1,7 @@
 [submodule "BuildCraft"]
 	path = BuildCraft
 	url = https://github.com/BuildCraft/BuildCraft.git
+[submodule "Forestry"]
+	path = Forestry
+	url = git@github.com:ForestryMC/ForestryMC.git
+	branch = sorting_block

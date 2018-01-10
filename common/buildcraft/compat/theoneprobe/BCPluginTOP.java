@@ -18,7 +18,7 @@ import net.minecraftforge.fml.common.Loader;
 import net.minecraftforge.fml.common.Optional;
 import net.minecraftforge.fml.common.event.FMLInterModComms;
 
-import buildcraft.api.BCModules;
+import buildcraft.api.EnumBuildCraftModule;
 import buildcraft.api.mj.ILaserTarget;
 import buildcraft.api.mj.MjAPI;
 
@@ -71,7 +71,7 @@ public class BCPluginTOP implements Function<ITheOneProbe, Void>, IBlockDisplayO
     @Optional.Method(modid = TOP_MOD_ID)
     public void addProbeInfo(ProbeMode mode, IProbeInfo probeInfo, EntityPlayer player, World world, IBlockState blockState, IProbeHitData data) {
         ResourceLocation blockRegistryName = blockState.getBlock().getRegistryName();
-        if ((blockRegistryName != null) && (BCModules.isBcMod(blockRegistryName.getResourceDomain()))) {
+        if ((blockRegistryName != null) && (EnumBuildCraftModule.isBuildCraftMod(blockRegistryName.getResourceDomain()))) {
             TileEntity entity = world.getTileEntity(data.getPos());
             if (entity instanceof IAutoCraft) {
                 this.addAutoCraftInfo(probeInfo, (IAutoCraft) entity);

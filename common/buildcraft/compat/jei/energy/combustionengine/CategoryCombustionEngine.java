@@ -2,7 +2,7 @@ package buildcraft.compat.jei.energy.combustionengine;
 
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fluids.FluidStack;
-import buildcraft.api.BCModules;
+import buildcraft.api.EnumBuildCraftModule;
 import mezz.jei.api.IGuiHelper;
 import mezz.jei.api.gui.IDrawable;
 import mezz.jei.api.gui.IGuiFluidStackGroup;
@@ -21,7 +21,7 @@ public class CategoryCombustionEngine extends BlankRecipeCategory<WrapperCombust
         this.background = guiHelper.createDrawable(
                 new ResourceLocation("minecraft", "textures/gui/container/furnace.png"),
                 55, 38, 18, 32, 0, 0, 0, 80);
-        guiHelper.createDrawable(new ResourceLocation(BCModules.ENERGY.getModId(), ""), 0, 0, 16, 16);
+        guiHelper.createDrawable(new ResourceLocation(EnumBuildCraftModule.ENERGY.getModId(), ""), 0, 0, 16, 16);
     }
 
     @Override
@@ -36,7 +36,7 @@ public class CategoryCombustionEngine extends BlankRecipeCategory<WrapperCombust
 
     @Override
     public String getModName() {
-        return BCModules.ENERGY.name();
+        return EnumBuildCraftModule.ENERGY.name();
     }
 
     @Override

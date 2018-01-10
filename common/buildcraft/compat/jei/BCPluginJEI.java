@@ -8,7 +8,7 @@ import com.google.common.collect.Lists;
 
 import net.minecraftforge.fml.common.Loader;
 
-import buildcraft.api.BCModules;
+import buildcraft.api.EnumBuildCraftModule;
 import buildcraft.api.core.BCLog;
 import buildcraft.api.fuels.IFuel;
 import buildcraft.api.recipes.AssemblyRecipe;
@@ -54,11 +54,11 @@ public class BCPluginJEI implements IModPlugin {
     public void register(IModRegistry registry) {
         BCPluginJEI.registry = registry;
         registry.addAdvancedGuiHandlers(new GuiHandlerBuildCraft());
-//        boolean transport = Loader.isModLoaded(BCModules.TRANSPORT.getModId());
-        boolean factory = Loader.isModLoaded(BCModules.FACTORY.getModId());
-        boolean energy = Loader.isModLoaded(BCModules.ENERGY.getModId());
-        boolean silicon = Loader.isModLoaded(BCModules.SILICON.getModId());
-//        boolean robotics = Loader.isModLoaded(BCModules.ROBOTICS.getModId());
+//        boolean transport = Loader.isModLoaded(EnumBuildCraftModule.TRANSPORT.getModId());
+        boolean factory = Loader.isModLoaded(EnumBuildCraftModule.FACTORY.getModId());
+        boolean energy = Loader.isModLoaded(EnumBuildCraftModule.ENERGY.getModId());
+        boolean silicon = Loader.isModLoaded(EnumBuildCraftModule.SILICON.getModId());
+//        boolean robotics = Loader.isModLoaded(EnumBuildCraftModule.ROBOTICS.getModId());
 
         if (factory) {
             registry.handleRecipes(IRefineryRecipeManager.ICoolableRecipe.class, new HandlerCoolable(), CategoryCoolable.UID);
@@ -90,11 +90,11 @@ public class BCPluginJEI implements IModPlugin {
 
     @Override
     public void registerCategories(IRecipeCategoryRegistration registry) {
-//        boolean transport = Loader.isModLoaded(BCModules.TRANSPORT.getModId());
-        boolean factory = Loader.isModLoaded(BCModules.FACTORY.getModId());
-        boolean energy = Loader.isModLoaded(BCModules.ENERGY.getModId());
-        boolean silicon = Loader.isModLoaded(BCModules.SILICON.getModId());
-//        boolean robotics = Loader.isModLoaded(BCModules.ROBOTICS.getModId());
+//        boolean transport = Loader.isModLoaded(EnumBuildCraftModule.TRANSPORT.getModId());
+        boolean factory = Loader.isModLoaded(EnumBuildCraftModule.FACTORY.getModId());
+        boolean energy = Loader.isModLoaded(EnumBuildCraftModule.ENERGY.getModId());
+        boolean silicon = Loader.isModLoaded(EnumBuildCraftModule.SILICON.getModId());
+//        boolean robotics = Loader.isModLoaded(EnumBuildCraftModule.ROBOTICS.getModId());
 
         List<String> lst = Lists.newArrayList();
         IGuiHelper helper = registry.getJeiHelpers().getGuiHelper();

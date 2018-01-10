@@ -3,7 +3,7 @@ package buildcraft.compat.jei.factory;
 import net.minecraft.client.Minecraft;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fluids.FluidStack;
-import buildcraft.api.BCModules;
+import buildcraft.api.EnumBuildCraftModule;
 import mezz.jei.api.IGuiHelper;
 import mezz.jei.api.gui.IDrawable;
 import mezz.jei.api.gui.IGuiFluidStackGroup;
@@ -35,7 +35,7 @@ public class CategoryDistiller extends BlankRecipeCategory<WrapperDistiller> {
 
     @Override
     public String getModName() {
-        return BCModules.FACTORY.name();
+        return EnumBuildCraftModule.FACTORY.name();
     }
 
     @Override

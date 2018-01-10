@@ -51,6 +51,13 @@ repositories {
     maven { name="hwyla"; url="http://tehnut.info/maven" }
     // The One probe depends on the RF API -- we don't use it ourselves, nor will we ever add compat for it...
     maven { name="cofh"; url="http://maven.covers1624.net" }
+	maven {
+		url 'http://maven.epoxide.xyz'
+	}
+	maven {
+		name = "ic2"
+		url = "http://maven.ic2.player.to/"
+	}
 }
 
 dependencies {
@@ -68,6 +75,9 @@ dependencies {
     // HWYLA
     compileOnly "mcp.mobius.waila:Hwyla:${config.hwyla_version}:api"
     runtime "mcp.mobius.waila:Hwyla:${config.hwyla_version}"
+
+	deobfCompile "net.darkhax.tesla:Tesla-1.12:1.0.60"
+	deobfCompile "net.industrial-craft:industrialcraft-2:2.8.24-ex112:api"
 }
 
 minecraft {
@@ -116,9 +126,13 @@ sourceSets {
             srcDir "BuildCraft/BuildCraftAPI/api"
             srcDir "BuildCraft/common"
             srcDir "BuildCraft/src/autogen/java"
+            srcDir "Forestry/src/api/java"
+            srcDir "Forestry/src/main/java"
         }
         resources {
             srcDir "BuildCraft/buildcraft_resources"
+            srcDir "Forestry/src/main/resources"
+            srcDir "Forestry/lang"
             exclude "**/mcmod.info"
         }
     }
